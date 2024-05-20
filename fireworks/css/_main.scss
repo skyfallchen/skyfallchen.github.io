@@ -1,0 +1,993 @@
+@mixin font($size, $weight) {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    width: 1920px;
+}
+
+p {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #280606;
+    line-height: 1.8rem;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.bg {
+    background-image: url(../img/bg.jpg);
+    width: 1920px;
+    height: 2850px;
+}
+
+.leftBarWrap {
+    position: absolute;
+    top: 950px;
+    width: 1920px;
+    height: 1900px;
+}
+
+.content {
+    position: relative;
+    top: 950px;
+    width: 1920px;
+    height: 1900px;
+}
+
+.arrowBox {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 86%;
+
+    @extend %flex_column;
+
+    .arrow {
+        width: 84px;
+        height: 86px;
+        background-image: url(../img/arrow.png);
+    }
+
+    p {
+        @include font(20px, 700);
+        color: #fff9a5;
+        text-shadow: -1px -1px 0 #ff943e,
+            1px -1px 0 #ff943e,
+            -1px 1px 0 #ff943e,
+            1px 1px 0 #ff943e,
+            0px 0px 20px #d95700,
+            0px 0px 20px #d95700,
+            0px 0px 40px #d95700;
+        margin-bottom: 23px;
+    }
+}
+
+
+.leftBar {
+    @extend %flex_column;
+    position: sticky;
+    z-index: 4;
+    top: 220px;
+    width: 169px;
+    margin-top: 190px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+%leftBarBtn {
+    @include font(24px, 500);
+    width: 312px;
+    height: 101px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 29px 0px 29px 73px;
+    transition: 0.7s;
+    left: 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+%leftBarBtnHover {
+    left: 20px;
+    background-image: url(../img/btnHover.png);
+    color: #fcf2e7;
+}
+
+.btnHome {
+    @extend %leftBarBtn;
+    background-image: url(../img/btnHome.png);
+    color: #f7e1c8;
+
+    &:hover {
+        @extend %leftBarBtnHover;
+    }
+}
+
+.btnBuy {
+    @extend %leftBarBtn;
+    color: #f7e1c8;
+    background-image: url(../img/btnBuy.png);
+
+    &:hover {
+        @extend %leftBarBtnHover;
+    }
+}
+
+.btnFirework {
+    @extend %leftBarBtn;
+    color: #e3ccb5;
+    background-image: url(../img/btnFirework.png);
+
+    &:hover {
+        @extend %leftBarBtnHover;
+    }
+}
+
+.btnHistory {
+    @extend %leftBarBtn;
+    color: #d3bea6;
+    background-image: url(../img/btnHistory.png);
+
+    &:hover {
+        @extend %leftBarBtnHover;
+    }
+}
+
+.btnEvent {
+    @extend %leftBarBtn;
+    color: #c1ac96;
+    background-image: url(../img/btnEvent.png);
+
+    &:hover {
+        @extend %leftBarBtnHover;
+    }
+}
+
+.btnNotice {
+    @extend %leftBarBtn;
+    color: #b19c89;
+    background-image: url(../img/btnNotice.png);
+
+    &:hover {
+        @extend %leftBarBtnHover;
+    }
+}
+
+%flex_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%flex_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pageWrap {
+    position: relative;
+    top: 950px;
+    width: 1920px;
+    height: 950px;
+}
+
+.shopBox {
+    @extend %flex_column;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 53%;
+    top: 47%;
+
+    p {
+        font-size: 20px;
+        font-weight: 500;
+        width: 625px;
+        border-top: 2px solid #b5a794;
+        margin-top: 5px;
+        padding: 7px 2px 0px 2px;
+    }
+
+}
+
+%shop {
+    width: 1443px;
+    height: 241px;
+    box-sizing: border-box;
+    padding: 43px 0px 0px 255px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.Rshop {
+    background-image: url(../img/Rbg.png);
+    @extend %shop;
+
+    button {
+        color: #9fe053;
+    }
+}
+
+.SRshop {
+    background-image: url(../img/SRbg.png);
+    @extend %shop;
+
+    button {
+        color: #53c7e0;
+    }
+}
+
+.SSRshop {
+    background-image: url(../img/SSRbg.png);
+    @extend %shop;
+
+    button {
+        color: #e05353;
+    }
+}
+
+.contentBox {
+    @extend %flex_column;
+}
+
+.titleBox {
+    @extend %flex_row;
+    width: 625px;
+}
+
+.shopTitle {
+    @include font(24px, 400);
+    z-index: 2;
+    color: #f6e4b2;
+
+    &::before {
+        content: attr(data-storke);
+        position: absolute;
+        z-index: -1;
+        -webkit-text-stroke: 4px #280606;
+    }
+}
+
+.shopInfo {
+    @include font(17px, 300);
+    width: 144px;
+    height: 32px;
+    background-color: #9e7958;
+    border-radius: 32px;
+    color: #e6d7c4;
+    text-align: center;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+.underShopBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 39%;
+    top: 10%;
+    width: 1000px;
+
+    .checkBox {
+        width: 32px;
+        height: 32px;
+        background-color: #2a2329;
+        border: 3px solid #f6e4b2;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    p {
+        z-index: 2;
+        font-size: 28px;
+        color: #f6e4b2;
+        font-weight: 500;
+        margin-left: 14px;
+
+        &::before {
+            content: attr(data-storke);
+            position: absolute;
+            z-index: -1;
+            -webkit-text-stroke: 6px #280606;
+        }
+    }
+
+    .freeBtn {
+        @include font(24px, 700);
+        z-index: 2;
+        top: 100px;
+        left: 100px;
+        width: 196px;
+        height: 88px;
+        background-image: linear-gradient(to top, #cba780, #f5deaf);
+        border: 3px solid #f4ddae;
+        border-radius: 50px;
+        box-shadow: 0px 10px 0px #937060, 0px 7px 20px black, 0px 7px 20px black;
+        margin: 0px 121px 0px 295px;
+        color: #280606;
+        line-height: 1.8rem;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 2px;
+        cursor: pointer;
+
+        &::before {
+            content: "每日免費";
+            position: absolute;
+            z-index: -1;
+            -webkit-text-stroke: 3px #fff;
+        }
+
+        span {
+            font-size: 20px;
+
+            &::before {
+                content: "獲得原料１次​";
+                position: absolute;
+                top: 46px;
+                z-index: -1;
+                -webkit-text-stroke: 3px #fff;
+            }
+        }
+    }
+}
+
+.shopBtnBox {
+    @extend %flex_row;
+    width: 507px;
+    padding: 32px 66px 0px 0px;
+
+    span {
+        margin-left: 22px;
+    }
+}
+
+%lotteryBtn {
+    @include font(20px, 500);
+    width: 216px;
+    height: 113px;
+    box-sizing: border-box;
+    padding-top: 33px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+%lotteryBtnHover {
+    transform: scale(1.1);
+}
+
+.lotteryBtn1 {
+    @extend %lotteryBtn;
+    background-image: url(../img/btn1.png);
+
+    &:hover {
+        @extend %lotteryBtnHover;
+    }
+}
+
+.lotteryBtn10 {
+    @extend %lotteryBtn;
+    background-image: url(../img/btn10.png);
+
+    &:hover {
+        @extend %lotteryBtnHover;
+    }
+}
+
+.page3_wrap {
+    @extend %flex_column;
+    position: relative;
+    top: 49%;
+}
+
+.fireworkLotteryBtn {
+    @include font(50px, 700);
+    color: #fffccd;
+    text-shadow: -1px -1px 0 #ff943e,
+        1px -1px 0 #ff943e,
+        -1px 1px 0 #ff943e,
+        1px 1px 0 #ff943e,
+        0px 0px 20px #d95700,
+        0px 0px 20px #d95700,
+        0px 0px 40px #d95700;
+    margin-left: 35px;
+    margin-bottom: 64px;
+    cursor: pointer;
+}
+
+.MaterialBox {
+    @extend %flex_row;
+    z-index: 2;
+    padding: 5px 30px;
+    border-radius: 49px;
+    background-image: linear-gradient(to top, #c18c56, #e3a361);
+    box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+    margin-top: 16px;
+
+    .MaterialText {
+        @include font(30px, 400);
+        color: #f6e4b2;
+
+        &::before {
+            content: attr(data-storke);
+            position: absolute;
+            z-index: -1;
+            -webkit-text-stroke: 4px #280606;
+        }
+    }
+
+    .small {
+        transform: scale(0.8);
+        margin-right: -10px;
+    }
+
+    .marginLeft {
+        margin-left: 11px;
+    }
+
+    span {
+        background-color: #f2e1c3;
+        @include font(30px, 500);
+        color: #280606;
+        padding: 0px 14px;
+        border-radius: 43px;
+        margin-left: 10px;
+    }
+}
+
+.fireworkBtnBox {
+    @extend %flex_row;
+    margin-top: 22px;
+}
+
+.makeFirework {
+    width: 349px;
+    height: 97px;
+    background-image: url(../img/makeFirework.png);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        @extend %lotteryBtnHover;
+    }
+
+}
+
+.fireworkAward {
+    width: 282px;
+    height: 97px;
+    background-image: url(../img/fireworkAward.png);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        @extend %lotteryBtnHover;
+    }
+}
+
+.rankList {
+    position: relative;
+    top: 35%;
+    left: 76.5%;
+    width: 250px;
+
+    li {
+        @include font(18px, 500);
+        color: #280606;
+    }
+
+    .custom-counter {
+        padding-left: 10px;
+        margin-left: 0;
+        padding-right: 0;
+        list-style-type: none;
+    }
+
+    .custom-counter li {
+        counter-increment: step-counter;
+    }
+
+    .custom-counter li::before {
+        content: counter(step-counter);
+        margin-right: 6px;
+        font-size: 80%;
+        background-color: #df5972;
+        color: white;
+        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 7px;
+    }
+
+    .custom-counter li:nth-of-type(2)::before {
+        background-color: #df6659;
+    }
+
+    .custom-counter li:nth-of-type(3)::before {
+        background-color: #df8559;
+    }
+
+    .custom-counter li:nth-of-type(4)::before {
+        background-color: #dfc159;
+    }
+
+    .custom-counter li:nth-of-type(5)::before {
+        background-color: #88d858;
+    }
+
+    .custom-counter li:nth-of-type(6)::before {
+        background-color: #4eccd1;
+    }
+}
+
+%icon {
+    width: 37px;
+    height: 37px;
+}
+
+.icon1,
+.icon23,
+.icon78 {
+    @extend %icon;
+    background-image: url(../img/icon/01_23_78.jpg);
+}
+
+.icon2,
+.icon24,
+.icon79 {
+    @extend %icon;
+    background-image: url(../img/icon/02_24_79.jpg);
+}
+
+.icon3,
+.icon25,
+.icon80 {
+    @extend %icon;
+    background-image: url(../img/icon/03_25_80.jpg);
+}
+
+.icon4,
+.icon26,
+.icon81 {
+    @extend %icon;
+    background-image: url(../img/icon/04_26_81.jpg);
+}
+
+.icon5 {
+    @extend %icon;
+    background-image: url(../img/icon/05.jpg);
+}
+
+.icon6 {
+    @extend %icon;
+    background-image: url(../img/icon/06.jpg);
+}
+
+.icon7 {
+    @extend %icon;
+    background-image: url(../img/icon/07.jpg);
+}
+
+.icon8 {
+    @extend %icon;
+    background-image: url(../img/icon/08.jpg);
+}
+
+.icon9 {
+    @extend %icon;
+    background-image: url(../img/icon/09.jpg);
+}
+
+.icon10,
+.icon38 {
+    @extend %icon;
+    background-image: url(../img/icon/10_38.jpg);
+}
+
+.icon11 {
+    @extend %icon;
+    background-image: url(../img/icon/11.jpg);
+}
+
+.icon12 {
+    @extend %icon;
+    background-image: url(../img/icon/12.jpg);
+}
+
+.icon13 {
+    @extend %icon;
+    background-image: url(../img/icon/13.jpg);
+}
+
+.icon14,
+.icon97 {
+    @extend %icon;
+    background-image: url(../img/icon/14_97.jpg);
+}
+
+.icon15,
+.icon98 {
+    @extend %icon;
+    background-image: url(../img/icon/15_98.jpg);
+}
+
+.icon16,
+.icon102 {
+    @extend %icon;
+    background-image: url(../img/icon/16_102.jpg);
+}
+
+.icon17,
+.icon100 {
+    @extend %icon;
+    background-image: url(../img/icon/17_100.jpg);
+}
+
+.icon18,
+.icon101 {
+    @extend %icon;
+    background-image: url(../img/icon/18_101.jpg);
+}
+
+.icon19,
+.icon99 {
+    @extend %icon;
+    background-image: url(../img/icon/19_99.jpg);
+}
+
+.icon20,
+.icon103 {
+    @extend %icon;
+    background-image: url(../img/icon/20_103.jpg);
+}
+.icon44 {
+    @extend %icon;
+    background-image: url(../img/icon/44.jpg);
+}
+.icon68 {
+    @extend %icon;
+    background-image: url(../img/icon/68.jpg);
+}
+
+.icon21,
+.icon104 {
+    @extend %icon;
+    background-image: url(../img/icon/21_104.jpg);
+}
+.icon45 {
+    @extend %icon;
+    background-image: url(../img/icon/45.jpg);
+}
+.icon69 {
+    @extend %icon;
+    background-image: url(../img/icon/69.jpg);
+}
+
+.icon22,
+.icon105 {
+    @extend %icon;
+    background-image: url(../img/icon/22_105.jpg);
+}
+.icon46 {
+    @extend %icon;
+    background-image: url(../img/icon/46.jpg);
+}
+.icon70 {
+    @extend %icon;
+    background-image: url(../img/icon/70.jpg);
+}
+
+.icon27,
+.icon82 {
+    @extend %icon;
+    background-image: url(../img/icon/27_82.jpg);
+}
+
+.icon28,
+.icon83 {
+    @extend %icon;
+    background-image: url(../img/icon/28_83.jpg);
+}
+
+.icon29,
+.icon54,
+.icon88 {
+    @extend %icon;
+    background-image: url(../img/icon/29_54_88.jpg);
+}
+
+.icon30 {
+    @extend %icon;
+    background-image: url(../img/icon/30.jpg);
+}
+
+.icon31 {
+    @extend %icon;
+    background-image: url(../img/icon/31.jpg);
+}
+
+.icon32 {
+    @extend %icon;
+    background-image: url(../img/icon/32.jpg);
+}
+
+.icon33 {
+    @extend %icon;
+    background-image: url(../img/icon/33.jpg);
+}
+
+.icon34,
+.icon61 {
+    @extend %icon;
+    background-image: url(../img/icon/34_61.jpg);
+}
+
+.icon35,
+.icon62 {
+    @extend %icon;
+    background-image: url(../img/icon/35_62.jpg);
+}
+.icon95 {
+    @extend %icon;
+    background-image: url(../img/icon/95.jpg);
+}
+
+.icon36 {
+    @extend %icon;
+    background-image: url(../img/icon/36.jpg);
+}
+
+.icon37 {
+    @extend %icon;
+    background-image: url(../img/icon/37.jpg);
+}
+
+.icon39 {
+    @extend %icon;
+    background-image: url(../img/icon/39.jpg);
+}
+
+.icon40 {
+    @extend %icon;
+    background-image: url(../img/icon/40.jpg);
+}
+
+.icon41 {
+    @extend %icon;
+    background-image: url(../img/icon/41.jpg);
+}
+
+.icon42 {
+    @extend %icon;
+    background-image: url(../img/icon/42.jpg);
+}
+.icon67 {
+    @extend %icon;
+    background-image: url(../img/icon/67.jpg);
+}
+
+.icon43 {
+    @extend %icon;
+    background-image: url(../img/icon/43.jpg);
+}
+.icon66 {
+    @extend %icon;
+    background-image: url(../img/icon/66.jpg);
+}
+
+.icon47,
+.icon72 {
+    @extend %icon;
+    background-image: url(../img/icon/47_72.jpg);
+}
+
+.icon48,
+.icon73 {
+    @extend %icon;
+    background-image: url(../img/icon/48_73.jpg);
+}
+
+.icon49,
+.icon74 {
+    @extend %icon;
+    background-image: url(../img/icon/49_74.jpg);
+}
+
+.icon50,
+.icon75 {
+    @extend %icon;
+    background-image: url(../img/icon/50_75.jpg);
+}
+
+.icon51,
+.icon76 {
+    @extend %icon;
+    background-image: url(../img/icon/51_76.jpg);
+}
+
+.icon52,
+.icon77 {
+    @extend %icon;
+    background-image: url(../img/icon/52_77.jpg);
+}
+
+.icon53,
+.icon87 {
+    @extend %icon;
+    background-image: url(../img/icon/53_87.jpg);
+}
+
+.icon55 {
+    @extend %icon;
+    background-image: url(../img/icon/55.jpg);
+}
+
+.icon56 {
+    @extend %icon;
+    background-image: url(../img/icon/56.jpg);
+}
+
+.icon57,
+.icon91 {
+    @extend %icon;
+    background-image: url(../img/icon/57_91.jpg);
+}
+
+.icon58,
+.icon92 {
+    @extend %icon;
+    background-image: url(../img/icon/58_92.jpg);
+}
+
+.icon59,
+.icon93 {
+    @extend %icon;
+    background-image: url(../img/icon/59_93.jpg);
+}
+
+.icon60 {
+    @extend %icon;
+    background-image: url(../img/icon/60.jpg);
+}
+
+.icon63 {
+    @extend %icon;
+    background-image: url(../img/icon/63.jpg);
+}
+.icon96 {
+    @extend %icon;
+    background-image: url(../img/icon/96.jpg);
+}
+
+.icon64 {
+    @extend %icon;
+    background-image: url(../img/icon/64.jpg);
+}
+.icon94 {
+    @extend %icon;
+    background-image: url(../img/icon/94.jpg);
+}
+
+.icon65 {
+    @extend %icon;
+    background-image: url(../img/icon/65.jpg);
+}
+
+.icon71 {
+    @extend %icon;
+    background-image: url(../img/icon/71.jpg);
+}
+
+.icon84 {
+    @extend %icon;
+    background-image: url(../img/icon/84.jpg);
+}
+
+.icon85 {
+    @extend %icon;
+    background-image: url(../img/icon/85.jpg);
+}
+
+.icon86 {
+    @extend %icon;
+    background-image: url(../img/icon/86.jpg);
+}
+
+.icon89 {
+    @extend %icon;
+    background-image: url(../img/icon/89.jpg);
+}
+
+.icon90 {
+    @extend %icon;
+    background-image: url(../img/icon/90.jpg);
+}
+
+.icon106 {
+    @extend %icon;
+    background-image: url(../img/icon/106.jpg);
+}
+
+.icon107 {
+    @extend %icon;
+    background-image: url(../img/icon/107.jpg);
+}
+
+.animate {
+    position: fixed;
+    top: 29%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/ball.png);
+    display: none;
+}
+
+%fireworkAnime {
+    position: absolute;
+    transform: scale(0);
+    mix-blend-mode: screen;
+}
+
+#fireworks {
+    @extend %fireworkAnime;
+    left: -6%;
+    bottom: 63%;
+    animation: fireworks 5s 4s infinite;
+    overflow: hidden;
+}
+
+#fireworksY {
+    @extend %fireworkAnime;
+    left: 59%;
+    bottom: 61%;
+    animation: fireworks 5s 1s infinite;
+}
+
+#fireworksB {
+    @extend %fireworkAnime;
+    left: 62%;
+    bottom: 66%;
+    animation: fireworks 5s 2s infinite;
+}
+
+#fireworksW {
+    @extend %fireworkAnime;
+    left: 40%;
+    bottom: 73%;
+    animation: fireworks 5s 3s infinite;
+}
+
+@keyframes fireworks {
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

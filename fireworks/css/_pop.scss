@@ -1,0 +1,431 @@
+%mask {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: fixed;
+    display: none;
+}
+
+.mask {
+    @extend %mask;
+    z-index: 5;
+}
+
+.maskS {
+    @extend %mask;
+    z-index: 7;
+}
+
+.maskLock {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    z-index: 999;
+}
+
+%pop_center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+}
+
+@keyframes popup {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    20% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.pop {
+    @extend %pop_center;
+    background-image: url(../img/popBg.png);
+    width: 813px;
+    height: 567px;
+    animation: popup 0.5s;
+    display: none;
+}
+
+.popWrap,
+.popHistoryWrap,
+.popEventWrap,
+.popNoticeWrap {
+    box-sizing: border-box;
+    padding: 35px 0;
+
+    .popContent {
+        height: 354px;
+    }
+}
+
+.popEventWrap {
+    .popEventContent {
+        height: 290px;
+    }
+
+    .ruleBox {
+        p {
+            color: #7f420f;
+        }
+    }
+}
+
+.popTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 320px;
+    height: 60px;
+    text-align: center;
+    background-image: linear-gradient(to top, #050301, #3d210b);
+    color: #dbd3c1;
+    border-radius: 53px;
+    margin: 0 auto 20px;
+    @include font(28px, 500);
+}
+
+.titleDeco {
+    background-image: url(../img/popArrow.png);
+    width: 29px;
+    height: 28px;
+    margin: 0 15px;
+}
+
+.deg180 {
+    transform: rotate(180deg);
+}
+
+.tabBtnBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 430px;
+    margin: 0 auto 15px;
+
+    .tabBtn {
+        background-color: #cab5a0;
+        height: 45px;
+        width: 166px;
+        @include font(20px, 600);
+        color: #41221a;
+        cursor: pointer
+    }
+
+    .active {
+        background-color: #9e7d5c;
+        height: 45px;
+        @include font(20px, 600);
+        color: #280606;
+    }
+}
+
+.popContent,
+.popEventContent {
+    width: 706px;
+    overflow-y: auto;
+    margin: 0 auto 15px;
+    box-sizing: border-box;
+    padding: 0 30px;
+
+    p {
+        @include font(18px, 500);
+        line-height: 1.7rem;
+    }
+
+    .recodeText {
+        @include font(22px, 500);
+        line-height: 2rem;
+        text-align: center;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 47%;
+        left: 50%;
+
+        button {
+            @include font(22px, 500);
+            color: #9e7d5c;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    table {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+
+        %td {
+            @include font(18px, 700);
+            vertical-align: middle;
+            box-sizing: border-box;
+            padding: 11px 10px;
+        }
+
+        thead {
+            background-color: #9e7d5c;
+
+            td {
+                @extend %td;
+                color: #280606;
+                border: 2px solid #9e7d5c;
+            }
+        }
+
+        tbody {
+
+            tr {
+
+                td {
+                    @extend %td;
+                    color: #280606;
+                    border-top: 1px solid #9e7d5c;
+                }
+            }
+        }
+    }
+}
+
+.popContent {
+    ul {
+        @include font(18px, 500);
+        line-height: 1.7rem;
+        color: #280606;
+        box-sizing: border-box;
+        padding: 0 25px 0 45px;
+        margin-top: 20px;
+        text-indent: -15px;
+    }
+
+    ul:nth-child(2) {
+        text-indent: -27px;
+    }
+}
+
+.popEventContent {
+    ul {
+        @include font(18px, 500);
+        line-height: 1.7rem;
+        color: #280606;
+        box-sizing: border-box;
+        padding: 0 25px 0 45px;
+        margin-top: 20px;
+        text-indent: -20px;
+    }
+}
+
+.popSContent {
+    width: 400px;
+    min-height: 100px;
+    margin: 0 auto 15px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        text-align: center;
+        @include font(20px, 400);
+        color: #fff;
+    }
+
+    .remindText {
+        text-align: center;
+        @include font(18px, 400);
+        color: #ff7d36;
+        margin: 10px 0;
+    }
+
+    span {
+        text-align: center;
+        @include font(20px, 500);
+        color: #ff7d36;
+        margin: 10px 5px;
+    }
+}
+
+.btn_box {
+    @extend %flex_row;
+    box-sizing: border-box;
+    padding: 0px 95px;
+}
+
+%closeBtn {
+    width: 96px;
+    height: 40px;
+    border-radius: 45px;
+    margin-top: -2px;
+    color: #280606;
+    @include font(20px, 700);
+    text-align: center;
+    cursor: pointer;
+}
+
+.center {
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -17px;
+}
+
+.centerLottery {
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 3px;
+}
+
+.cancel {
+    @extend %closeBtn;
+    background-image: linear-gradient(to top, #d52222, #ee8b60);
+    border: 2px solid #ffc5ab;
+    box-shadow: 0px 6px 0px #84343f;
+}
+
+.close {
+    @extend %closeBtn;
+    background-image: linear-gradient(to top, #d58322, #eec860);
+    border: 2px solid #ffe9ab;
+    box-shadow: 0px 6px 0px #843b34;
+}
+
+.popLottery {
+    @extend %pop_center;
+    background-image: linear-gradient(to top, #050301, #3d210b);
+    border: 7px solid #f4deaf;
+    box-shadow: 0px 18px 0px #7f5f50;
+    width: 800px;
+    height: 640px;
+    border-radius: 150px;
+    animation: popup 0.5s;
+    display: none;
+}
+
+.popLotteryTitle {
+    @include font(28px, 700);
+    color: #0b0602;
+    text-align: center;
+    z-index: 2;
+    margin-top: 40px;
+
+    &::before {
+        content: attr(data-storke);
+        position: absolute;
+        z-index: -1;
+        -webkit-text-stroke: 2px #f6e4b2;
+    }
+}
+
+.popLotteryContent {
+    overflow-y: auto;
+    width: 590px;
+    height: 410px;
+    margin: -6px auto 5px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+}
+
+.itemBox {
+    @extend %flex_row;
+    flex-wrap: wrap;
+    width: 510px;
+    margin: 0 auto;
+
+    .item {
+        @extend %flex_column;
+        margin: 15px 5px;
+        width: 160px;
+
+        p {
+            @include font(16px, 400);
+            color: #fff;
+        }
+    }
+
+    .item:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.popS {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    background-image: linear-gradient(to top, #050301, #3d210b);
+    border: 7px solid #f4deaf;
+    box-shadow: 0px 18px 0px #7f5f50;
+    width: 476px;
+    min-height: 234px;
+    border-radius: 80px;
+    animation: popup 0.5s;
+    display: none;
+}
+
+%popBtn {
+    width: 100px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 33px;
+}
+
+.sendBtn {
+    @extend %popBtn;
+    background-image: linear-gradient(to top, #27893e, #bbce6a);
+    border: 2px solid #367e41;
+    color: #18580d;
+    @include font(18px, 700);
+    text-shadow: -1px -1px 0 #f6e4b2,
+        1px -1px 0 #f6e4b2,
+        -1px 1px 0 #f6e4b2,
+        1px 1px 0 #f6e4b2;
+    cursor: pointer;
+}
+
+.makeBtn {
+    @extend %popBtn;
+    background-image: linear-gradient(to top, #cb4935, #f09238);
+    border: 2px solid #bd3632;
+    color: #7e1b0c;
+    @include font(18px, 700);
+    text-shadow: -1px -1px 0 #f6e4b2,
+        1px -1px 0 #f6e4b2,
+        -1px 1px 0 #f6e4b2,
+        1px 1px 0 #f6e4b2;
+    cursor: pointer;
+}
+
+.noneBtn {
+    @extend %popBtn;
+    background-color: #cab5a0;
+    border: 2px solid #cab5a0;
+    color: #280606;
+    @include font(18px, 700);
+}

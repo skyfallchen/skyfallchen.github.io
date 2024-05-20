@@ -1,0 +1,44 @@
+footer {
+    position: relative;
+    width: 1920px;
+    font-size: 12px;
+    background-color: #000000;
+
+    p {
+        color: #fff;
+        font-size: 12px;
+        line-height: 1rem;
+    }
+
+    .footerwrap {
+        width: 1104px;
+        padding: 20px 0;
+        margin: 0 auto;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .DGcopy {
+            font-size: 12px;
+
+            a {
+                color: #ff8b5e;
+                text-decoration: none;
+
+                &:hover {
+                    color: rgb(255, 199, 96)
+                }
+            }
+        }
+
+        .grade {
+            width: 325px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto 0;
+            align-items: center;
+            font-size: 12px;
+        }
+    }
+}

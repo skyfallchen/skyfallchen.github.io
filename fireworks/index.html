@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>《搞鬼Online》 璀璨煙花大賞</title>
+    <meta property="og:description" content="《搞鬼Online》 璀璨煙花大賞" />
+    <meta property="og:title" content="《搞鬼Online》 璀璨煙花大賞" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://go.digeam.com/event/20240411/" />
+    <meta property="og:site_name" content="《搞鬼Online》 璀璨煙花大賞" />
+    <meta property="og:locale" content="zh_tw" />
+    <meta property="article:author" content="https://www.facebook.com/DigeamGO/" />
+    <meta property="og:image" content="img/fb_share.jpg" />
+    <meta name="author" content="DiGeam" />
+    <meta name="keywords" content="Digeam 掘夢網,搞鬼Online" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="icon" href="https://go.digeam.com/images/favicon.ico" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css?v1.2" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="maskLock"></div>
+    <div class="mask"></div>
+    <div class="maskS"></div>
+    <div class="animate animate__animated animate__jello animate__infinite"></div>
+    <!--活動紀錄 -->
+    <div class="pop" id="pophistory">
+        <div class="popHistoryWrap">
+            <div class="popTitle">
+                <div class="titleDeco deg180"></div>活動紀錄<div class="titleDeco"></div>
+            </div>
+            <div class="popContent">
+                <table class="tableHistory">
+                    <thead>
+                        <tr>
+                            <td width="50px"></td>
+                            <td width="200px">道具名稱</td>
+                            <td width="70px">數量</td>
+                            <td width="100px">領取</td>
+                            <td width="100px">添加原料</td>
+                            <td width="130px">原料份量</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <button class="close center" onclick="closePopup()">關閉</button>
+        </div>
+    </div>
+    <!--活動說明 -->
+    <div class="pop" id="popEvent">
+        <div class="popEventWrap">
+            <div class="popTitle">
+                <div class="titleDeco deg180"></div>活動說明<div class="titleDeco"></div>
+            </div>
+            <div class="tabBtnBox">
+                <button class="tabBtn active" data-target="#buyRule">採購原料</button>
+                <button class="tabBtn" data-target="#makeRule">製作璀璨煙花</button>
+            </div>
+            <div class="popEventContent">
+                <div class="ruleBox" id="buyRule">
+                    <p>
+                        在這一年一度的慶典，大街小巷傳遞著歡笑聲。冥珠城管理人為所有前來的少俠們準備了一場製作煙花比賽，名為「璀璨煙花大賞」。參賽的少俠獲得材料後就可以依照自己的喜好來製作煙花，用五彩絢爛的色彩點綴夜空。
+                    </p>
+                    <ul>
+                        <li>1. 活動時間：2024/04/11 17:00 ~2024/05/09 10:00​</li>
+                        <li>2. 活動期間內，可花費搞鬼點數採購三種不同種類原料池，有機會從中獲得各式虛寶與時裝類型道具。​</li>
+                        <li>3. 基本原料、經典原料、高級原料裡的所有道具皆可以兌換成製作璀璨煙花所需要的原料份量，各道具可增加份量詳情請至原料內容物查看。​
+                            ​</li>
+                        <li>4. 採購原料滿10次可獲得「璀璨煙花慶典使用券」，滿20次則可獲得「大目仔棒棒糖」。​（不限原料池只要累積次數達到即可獲得。）​</li>
+                    </ul>
+                </div>
+                <div class="ruleBox" id="makeRule">
+                    <p>
+                        各位少俠都想一睹「璀璨煙花」的風采，同時冥珠城管理人也為每次製作出煙火點綴夜空的參賽者們提供了豐厚的獎勵，並且準備了精緻的獎盃給最終優勝者。究竟誰會拔得頭籌榮獲「璀璨煙花大師」的頭銜呢？比賽才剛剛開始，感興趣的少俠們，快去找到一個專屬於你的位置吧！繽紛絢爛的冥珠不夜城即將開始！
+                    </p>
+                    <ul>
+                        <li>1. 各道具皆有對應的原料份量，每滿66份可進行一次煙火的釋放。​</li>
+                        <li>2. 施放璀璨煙花獲得的道具，無法再進行原料添加動作兌換只能進行領取。​</li>
+                        <li>3. 道具進行原料添加後便無法再對其進行領取動作，因此請各位玩家務必確認原料道具是否正確，個人行為導致誤領或誤兌換恕不進行補發。
+                            ​</li>
+                        <li>4. 實體獎品的獲得管道由施放璀璨煙花的總次數排名來進行贈予，1~3名的玩家可獲得六週年限定實體獎勵「大目仔燃燈獎盃」，4~6名的玩家則可獲得遊戲道具「天降小雪 特級」。​</li>
+                        <li>5. 施放璀璨煙花總次數的排名，會顯示於排行榜上，排行榜為隨時更新，玩家只需刷新頁面即可看到最新的排名。​</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="close center" onclick="closePopup()">關閉</button>
+        </div>
+    </div>
+    <!--注意事項 -->
+    <div class="pop" id="popNotice">
+        <div class="popNoticeWrap">
+            <div class="popTitle">
+                <div class="titleDeco deg180"></div>注意事項<div class="titleDeco"></div>
+            </div>
+            <div class="popContent">
+                <ul>
+                    <li>1.本活動使用搞鬼點數參加活動。​​</li>
+                    <li>2.本活動頁面將於活動截止後關閉，請玩家務必於活動期間內領取完畢， 結束後將不開放重新領取。​</li>
+                    <li>3.本活動的商品為機率性，消費者購買或參與活動不代表即可獲得特定道具。​​</li>
+                    <li>4.本活動獎勵將於領取後的30分鐘內，發放至帳號內的禮物盒中。​​</li>
+                    <li>5.本活動僅限電腦版領取，若使用手機版登入活動頁面，導致無法領取獎勵恕不補發。​​</li>
+                    <li>6.本活動之虛寶將無法折換現金或其他等值商品。​​</li>
+                    <li>7.獎池道具進行材料積分兌換動作後，便不可再進行領取動作。​</li>
+                    <li>8.本活動實體獎勵獲得方法為按照施放璀璨煙火排名順序，最後實際排名依官方後台記錄為主。</li>​
+                    <li>9.本活動實體獎勵僅限台灣玩家領取，於頁面獲得實體獎勵之玩家，請於獲獎後30日內填寫寄送資料，並寄回客服信箱，逾期視同放棄獎勵。​</li>
+                </ul>
+                <ul>
+                    <li>10.本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌例：人為操作、惡意灌票、蓄意偽造、多開（重）帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正當的方式意圖以進行不實或虛偽活動參與行為，參賽者因上述情形所獲得之活動資格及獎項，本公司得一概取消之，其帳號亦將停權處份。​​
+                    </li>
+                    <li>11.玩家參與本活動之同時，即同意接受本活動辦法與注意事項之規範，如不同意或有違反，應視為無參加資格 ，或本公司得取消其使用資格，​​
+                        如因此有致生損害於本公司或其他任何第三人，本公司得向參加者請求損害賠償，參加者應負一切相關責任。​​</li>
+                    <li>12.掘夢網保留變更、取消或終止本活動的權利，包括但不限於本活動條款及活動辦法。</li>
+                </ul>
+            </div>
+            <button class="close center" onclick="closePopup()">關閉</button>
+        </div>
+    </div>
+    <!-- 內容物跳窗 -->
+    <div class="pop" id="pop">
+        <div class="popWrap">
+        </div>
+    </div>
+    <!-- 小跳窗 -->
+    <div class="popS">
+        <div class="popWrap">
+        </div>
+    </div>
+    <!-- 獲得原料 -->
+    <div class="popLottery">
+    </div>
+    <!--首頁 -->
+    <div id="fireworks"><img src="img/fireworks.png" alt=""></div>
+    <div id="fireworksY"><img src="img/FireworksY.jpg" alt=""></div>
+    <div id="fireworksB"><img src="img/FireworksB.jpg" alt=""></div>
+    <div id="fireworksW"><img src="img/fireworksW.png" alt=""></div>
+    <div class="bg" id="home">
+        <nav class="nav">
+            <div class="nav_wrap">
+                <a href="https://go.digeam.com/home/" title="官方網站" class="logo"><img src="img/logo.png" alt=""></a>
+                <div class="list_wrap">
+                    <div class="acc-content">
+                        <div class="sign_box">
+                            <!-- 已登 -->
+                            <ul class="player_acc">
+                                <li class="acc_txt">目前帳號:</li>
+                                <li class="acc_id"><span>
+                                        skyfall0411
+                                    </span>
+                                </li>
+                                <li class="acc_txt">目前點數:</li>
+                                <li class="acc point">0</li>
+                            </ul>
+                            <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
+                                style="display: none;">
+                                <input type="hidden" name="return_url" id="return_url"
+                                    value="">
+                            </form>
+                            <button class="btn_signOut" onclick="logout_dg()">登出</button>
+                            <!-- 未登 -->
+                            <!-- <ul class="player_acc">
+                                <li class="acc_txt">目前帳號:</li>
+                                <li class="acc_id">請先登入會員</li>
+                                <li class="acc_txt">目前點數:</li>
+                                <li class="acc point">0</li>
+                            </ul>
+                            <div class="btn_sign"><a href="https://www.digeam.com/login"></a>登入</div> -->
+                        </div>
+                        <div class="nav_list">
+                            <a href="https://www.digeam.com/register"><i class="fa-solid fa-user-plus item fa-xl"
+                                    title="會員註冊"></i></a>
+                            <a href="https://go.digeam.com/download/" target="_blank"><i
+                                    class="fa-solid fa-download item fa-xl" title="遊戲下載"></i></a>
+                            <a href="https://www.facebook.com/DigeamGO/" target="_blank"><i
+                                    class="fa-brands fa-facebook item fa-xl" title="粉絲團"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="arrowBox">
+            <p>前往採購材料</p>
+            <div class="arrow animate__animated animate__bounce animate__infinite animate__slow 2s"></div>
+        </div>
+        <div class="leftBarWrap">
+            <div class="leftBar">
+                <a href="#home">
+                    <div class="btnHome">首頁</div>
+                </a>
+                <a href="#page1">
+                    <div class="btnBuy">採購原料</div>
+                </a>
+                <a href="#page2">
+                    <div class="btnFirework">璀璨煙花</div>
+                </a>
+                <div class="btnHistory">活動紀錄</div>
+                <div class="btnEvent">活動說明</div>
+                <div class="btnNotice">注意事項</div>
+            </div>
+        </div>
+        <!-- 採購原料 -->
+        <div class="pageWrap" id="page1">
+            <div class="shopBox">
+                <div class="Rshop">
+                    <div class="contentBox">
+                        <div class="titleBox">
+                            <div class="shopTitle" data-storke="基本原料">基本原料</div>
+                            <div class="shopInfo" data-pop="R">★ 原料內容物</div>
+                        </div>
+                        <p>大多屬於基本的原料配置，對於初心者而言是個不錯的選項，​<br>
+                            內含多種簡易上手且實用度高的材料，比例的分配也十分輕鬆。​​<br>
+                            不過成品也相對的較平庸，但是運氣好還是有機會開到高級的材料喔！​</p>
+                    </div>
+                    <div class="shopBtnBox">
+                        <button class="lotteryBtn1">搞鬼點數<span>59</span></button>
+                        <button class="lotteryBtn10">搞鬼點數<span>579</span></button>
+                    </div>
+                </div>
+                <div class="SRshop">
+                    <div class="contentBox">
+                        <div class="titleBox">
+                            <div class="shopTitle" data-storke="經典原料">經典原料</div>
+                            <div class="shopInfo" data-pop="SR">★ 原料內容物</div>
+                        </div>
+                        <p>內含許多各種形式煙花通用的原料，​​<br>
+                            只要是有過製作煙花經驗的參賽者都不會陌生的！​​<br>
+                            同時可獲得高級的原料也較多，能夠幫助自己的煙花更為絢爛。​​​</p>
+                    </div>
+                    <div class="shopBtnBox">
+                        <button class="lotteryBtn1">搞鬼點數<span>89</span></button>
+                        <button class="lotteryBtn10">搞鬼點數<span>869</span></button>
+                    </div>
+                </div>
+                <div class="SSRshop">
+                    <div class="contentBox">
+                        <div class="titleBox">
+                            <div class="shopTitle" data-storke="高級原料">高級原料</div>
+                            <div class="shopInfo" data-pop="SSR">★ 原料內容物</div>
+                        </div>
+                        <p>裡面的內容物全都是較為高級且稀有的原料，​​​<br>
+                            或許只有煙花高手能夠駕馭這些原料！​​​<br>
+                            據說裡面還有傳說級的原料，傳聞只有璀璨的煙火才會內含這些原料。​​​<br>
+                            各位高手快來挑戰看看吧！​​</p>
+                    </div>
+                    <div class="shopBtnBox">
+                        <button class="lotteryBtn1">搞鬼點數<span>99</span></button>
+                        <button class="lotteryBtn10">搞鬼點數<span>959</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="underShopBox">
+                <div class="checkBox" data-skipClicked="false"></div>
+                <p data-storke="略過確認&動畫">略過確認&動畫</p>
+                <button class="freeBtn">每日免費</br><span>獲得原料１次​</span></button>
+            </div>
+        </div>
+        <!-- 璀璨煙花 -->
+        <div class="pageWrap" id="page2">
+            <div class="page3_wrap">
+                <button class="fireworkLotteryBtn">施放煙花！</button>
+                <div class="MaterialBox">
+                    <div class="MaterialText" data-storke="目前持有原料">目前持有原料</div>
+                    <span class="material">0</span>
+                    <div class="MaterialText small" data-storke="/66">/66</div>
+                    <div class="MaterialText marginLeft" data-storke="份">份</div>
+                </div>
+                <div class="MaterialBox">
+                    <div class="MaterialText" data-storke="可施放煙花總數">可施放煙花總數</div>
+                    <span class="firework">0</span>
+                    <div class="MaterialText marginLeft" data-storke="發">發</div>
+                </div>
+                <div class="fireworkBtnBox">
+                    <button class="makeFirework"></button>
+                    <button class="fireworkAward" data-pop="firework"></button>
+                </div>
+            </div>
+            <div class="rankList">
+                <ol class="custom-counter">
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footerwrap">
+            <a href="https://www.digeam.com/" target="_blank" class="digeam"><img src="img/footer/digeamlogo.png"></a>
+            <div class="mgame"><img src="img/footer/mlogo.webp"></div>
+            <div class="DGcopy">
+                <p class="dg-name">掘夢網股份有限公司 © <span id="getyear">2023</span></p>
+                <div>Copyright © DiGeam Corporation. All Rights Reserved.</div>
+                <div>客服信箱: <a href="https://www.digeam.com/cs" target="_blank">www.digeam.com/cs</a></br>官方網站: <a
+                        href="https://www.digeam.com" target="_blank">www.digeam.com</a></div>
+            </div>
+            <div class="grade">
+                <img src="img/footer/15plus.png">
+                <p>
+                    本遊戲為免費使用，部分內容涉及暴力情節。</br>
+                    遊戲內另提供購買虛擬遊戲幣、物品等付費服務。</br>
+                    請注意遊戲時間，避免沉迷。</br>
+                    <span style="color: #ff8b5e;">本遊戲服務區域包含台灣、香港、澳門。</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/190224718e.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/view.js?1.4"></script>
+    <script src="js/main.js?v2.7"></script>
+</body>
+
+</html>
