@@ -1,0 +1,119 @@
+.title {
+    background-image: url(../img/title.png);
+    height: 300px;
+    width: 495px;
+    margin: 76px 232px 0 auto;
+}
+
+.title_light {
+    background-image: url(../img/title_light.png);
+    height: 108px;
+    width: 108px;
+    position: absolute;
+    top: 98px;
+    left: 334px;
+    z-index: 99;
+    animation: light 2s infinite;
+    transform-origin: center;
+}
+
+@keyframes light {
+    form {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.coin1 {
+    background-image: url(../img/coin1.png);
+    height: 650px;
+    width: 980px;
+    position: absolute;
+    top: -25px;
+    z-index: 98;
+    animation: coin1 1.3s alternate infinite;
+}
+
+.coin2 {
+    background-image: url(../img/coin2.png);
+    height: 650px;
+    width: 980px;
+    position: absolute;
+    top: 0px;
+    z-index: 98;
+    animation: coin2 1.3s alternate infinite;
+}
+
+.coin3 {
+    background-image: url(../img/coin3.png);
+    height: 650px;
+    width: 980px;
+    position: absolute;
+    top: -25px;
+    z-index: 98;
+    animation: coin3 1s alternate infinite;
+}
+
+@keyframes coin1 {
+    0% {
+        top: -25px;
+        -webkit-filter: drop-shadow(0 0 15px #ffd74b);
+    }
+
+    100% {
+        top: 0px;
+        -webkit-filter: drop-shadow(0 0 5px #ffd74b);
+    }
+}
+
+@keyframes coin2 {
+    0% {
+        top: 0px;
+        -webkit-filter: drop-shadow(0 0 15px #ffd74b);
+    }
+
+    100% {
+        top: -10px;
+        -webkit-filter: drop-shadow(0 0 5px #ffd74b);
+    }
+}
+
+@keyframes coin3 {
+    0% {
+        top: -25px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+.title_m {
+    background-image: url(../img/title_m.png);
+    height: 179px;
+    width: 676px;
+    margin: -70px auto 0 auto;
+}
+
+.title_s {
+    background-image: url(../img/title_s.png);
+    height: 31px;
+    width: 320px;
+    margin: -45px auto 0 auto;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 0 10px #ffd130, 0 0 15px #ffd130;
+    text-align: center;
+    margin: 21px auto 21px auto;
+}
+.home_info{
+ left: 93%;
+ margin-top: 18px; 
+}
