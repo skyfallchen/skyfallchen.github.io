@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>《搞鬼Online》 2024新春祈福</title>
+    <meta property="og:description" content="《搞鬼Online》 2024新春祈福" />
+    <meta property="og:title" content="《搞鬼Online》 2024新春祈福" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://go.digeam.com/event/20240205/" />
+    <meta property="og:site_name" content="《搞鬼Online》 2024新春祈福" />
+    <meta property="og:locale" content="zh_tw" />
+    <meta property="article:author" content="https://www.facebook.com/DigeamGO/" />
+    <meta property="og:image" content="/event/20240205/img/fb_share.jpg" />
+    <meta name="author" content="DiGeam" />
+    <meta name="keywords"
+        content="Digeam 掘夢網,搞鬼Online，遊戲新幹線，新幹線，MGAME，5566，5566搞鬼廣告，鬼魂Online,孫協志,王仁甫,許孟哲,王紹偉,小刀,56不能亡,搞鬼(美版),搞鬼(大陸版),韓版搞鬼,陸服搞鬼,搞鬼私服,靈遊記,大目仔,粉目仔,豬大長,馬四掌,法茹雪,狗骨頭,小賴打,雨傘標,薑絲男,多拉B夢,觸目仔,蛋幾咧,太和老君,梅花弱,蘭霉匠,鬼魂者,RPG,角色扮演,動作遊戲,東方鬼神題材,2D橫向卷軸,動作,奇幻,冒險,可愛和風百鬼夜行,楓之谷,搞鬼：寶島新樂園,搞鬼：鬼娃法樂米,搞鬼：神射咻咻咻,恨夜城,白斬姬,烏骨雞,Ghost,軍士,購物,狂歡" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="icon" href="https://go.digeam.com/images/favicon.ico" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css?v1.4" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mask"></div>
+    <div class="mask_s"></div>
+    <div class="mask_lock"></div>
+    <!-- 抽籤動畫 -->
+    <div class="ask_animate_box">
+        <div class="smoke_M"></div>
+        <div class="smoke_L"></div>
+        <div class="smoke_R"></div>
+        <div class="flower_L"></div>
+        <div class="flower_R"></div>
+        <div class="flower_Rs"></div>
+        <div class="paperbox_animate"></div>
+    </div>
+    <!-- 求籤結果 -->
+    <div class="pop_ask">
+        <div class="pop_ask_content">
+            <div class="ask_paper_box">
+                <div class="paper_box">
+                    <div class="paper_xl"></div>
+                    <div class="paper_count">
+                    </div>
+                </div>
+                <div class="paper_box">
+                    <div class="paper_l"></div>
+                    <div class="paper_count">
+                    </div>
+                </div>
+                <div class="paper_box">
+                    <div class="paper_m"></div>
+                    <div class="paper_count">
+                    </div>
+                </div>
+                <div class="paper_box">
+                    <div class="paper_s"></div>
+                    <div class="paper_count">
+                    </div>
+                </div>
+                <div class="paper_box">
+                    <div class="paper_e"></div>
+                    <div class="paper_count">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close_s">關閉</div>
+    </div>
+    <!-- 跳窗_商店 -->
+    <div class="pop_shop">
+        <div class="pop_shop_content">
+            <div class="user_paper"></div>
+            <div class="shop_item_box">
+            </div>
+        </div>
+        <div class="close">關閉</div>
+    </div>
+    <!-- 跳窗_活動紀錄 -->
+    <div class="pop_recode">
+        <div class="pop_recode_wrap">
+            <div class="pop_title">活動紀錄</div>
+            <div class="pop_content">
+                <div class="tab_btn_box">
+                    <button class="tab_btn active" data-target="#buy_history">購買紀錄</button>
+                    <button class="tab_btn" data-target="#paper_history">求籤紀錄</button>
+                </div>
+                <div class="history_box" id="buy_history">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="50px"></td>
+                                <td width="150px">道具名稱</td>
+                                <td width="50px">數量</td>
+                                <td width="100px">取得方式</td>
+                                <td width="150px">取得時間</td>
+                                <td width="50px"></td>
+                            </tr>
+                        </thead>
+                        <tbody class="record1">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="history_box" id="paper_history">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="200px">名稱</td>
+                                <td width="300px">取得時間</td>
+                                <td width="200px">取得方式</td>
+                            </tr>
+                        </thead>
+                        <tbody class="record2">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="close">關閉</div>
+    </div>
+    <!-- 跳窗_活動說明 -->
+    <div class="pop_rule">
+        <div class="pop_rule_wrap">
+            <div class="pop_title">活動說明</div>
+            <div class="pop_content">
+                <div class="tab_btn_box">
+                    <button class="tab_btn active" data-target="#event_rule">規則說明</button>
+                    <button class="tab_btn" data-target="#paper_rule">御神籤說明</button>
+                    <button class="tab_btn" data-target="#paper_reward">求籤回饋</button>
+                </div>
+                <div class="rule_box" id="event_rule">
+                    <ul>
+                        <li>1. 活動時間：2024/02/05 12:00 ~2024/03/07 維護前​</li>
+                        <li>2. 活動期間內，玩家每天於活動頁面登入時，可免費進行卡池3次抽取。​</li>
+                        <li>3. 免費求籤次數不列入求籤回饋的次數計算。​</li>
+                        <li>4. 卡池可抽取出末吉、小吉、中吉、吉、大吉的御神籤。​</li>
+                        <li>5. 購買商店的道具時，需消耗販售價格的搞鬼點數+一張對應繪馬的御神籤，若身上沒有對應繪馬的御神籤，則無法購買該區商品。​
+                            <br>(EX:購買於末吉的合成初始符，需花費59點數+一張末吉御神籤)​
+                        </li>
+                        <li>6. 累計XX張末吉御神籤，可以兌換一張吉御神籤，累積XX張吉御神籤可以換一張中級御神籤，累計XX張中吉御神籤可兌換一張吉御神籤，累計XX張吉御神籤可兌換一張大吉御神籤。​</li>
+                        <li>7. 累計求籤達成指定次數，可以獲得回饋獎勵。​</li>
+                        <li>8. 購買商品後於30分鐘內發送至該帳號的禮物盒內。​</li>
+                        <li>9. 免費求籤的機會於每天00:00刷新重置。</li>
+                    </ul>
+                </div>
+                <div class="rule_box" id="paper_rule">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>名稱</td>
+                                <td>數量</td>
+                                <td>出現機率</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>大吉御神籤</td>
+                                <td>1</td>
+                                <td>0.3%</td>
+                            </tr>
+                            <tr>
+                                <td>吉御神籤</td>
+                                <td>1</td>
+                                <td>2.25%</td>
+                            </tr>
+                            <tr>
+                                <td>中吉御神籤</td>
+                                <td>1</td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <td>小吉御神籤</td>
+                                <td>1</td>
+                                <td>12.25%</td>
+                            </tr>
+                            <tr>
+                                <td>末吉御神籤</td>
+                                <td>1</td>
+                                <td>80.2%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>兌換御神籤</td>
+                                <td>兌換數量</td>
+                                <td>需求御神籤</td>
+                                <td>需求數量</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>大吉御神籤</td>
+                                <td>1</td>
+                                <td>吉御神籤</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>吉御神籤</td>
+                                <td>1</td>
+                                <td>中吉御神籤</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>中吉御神籤</td>
+                                <td>1</td>
+                                <td>小吉御神籤</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>小吉御神籤</td>
+                                <td>1</td>
+                                <td>末吉御神籤</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rule_box" id="paper_reward">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>道具名稱</td>
+                                <td>數量</td>
+                                <td>累計數</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>新春祈福使用券</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>泰和金櫃鑰匙</td>
+                                <td>1</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>新年新福氣</td>
+                                <td>1</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>合成保護咒</td>
+                                <td>2</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td>新年新福氣</td>
+                                <td>3</td>
+                                <td>300</td>
+                            </tr>
+                            <tr>
+                                <td>強化研磨劑</td>
+                                <td>2</td>
+                                <td>420</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="close">關閉</div>
+    </div>
+    <!-- 跳窗_注意事項 -->
+    <div class="pop_notice">
+        <div class="pop_notice_wrap">
+            <div class="pop_title">注意事項</div>
+            <div class="pop_content">
+                <ul>
+                    <li>1. 本活動使用搞鬼點數進行參加活動。​​</li>
+                    <li>2. 本活動頁面將於活動截止後關閉，請玩家務必於活動期間內領取完畢，​結束後將不開放重新領取。​​​</li>
+                    <li>3. 本活動的部分商品為機率性，消費者購買或參與活動不代表即可獲得特定道具。​​​​</li>
+                    <li>4. 本活動部份獎勵為不可交易，請慎選領取道具角色，若使用錯誤角色領取，​恕不提供轉移服務。（時裝道具除外）​​​​</li>
+                    <li>5. 本活動獎勵將於領取後的30分鐘內，發放至帳號內的禮物盒中。​​​​</li>
+                    <li>6. 本活動僅限電腦版領取，若使用手機版登入活動頁面，導致無法領取獎勵述不補發。​​​​</li>
+                    <li>7. 本活動之虛寶將無法折換現金或其他等值商品。​​​​</li>
+                    <li>8. 每次獲得獎勵皆不同，實際獎勵依活動頁面資訊為準。​​​​</li>
+                    <li>9. 本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌例：人為操作、惡意灌票、蓄意偽造、多開（重）帳號、短時間異常多筆參與行為、
+                        透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正當的方式意圖以進行不實或虛偽活動參與行為，參賽者因上述情形所獲得之活動資格及獎項，本公司得一概取消之，其帳號亦將停權處份。​​​​
+                    </li>
+                </ul>
+                <ul>
+                    <li>10. 玩家參與本活動之同時，即同意接受本活動辦法與注意事項之規範，如不同意或有違反，應視為無參加資格
+                        ，或本公司得取消其使用資格，​​如因此有致生損害於本公司或其他任何第三人，本公司得向參加者請求損害賠償，參加者應負一切相關責任。​​​​</li>
+                    <li>11. 掘夢網保留變更、取消或終止本活動的權利，包括但不限於本活動條款及活動辦法。​​</li>
+                </ul>
+            </div>
+        </div>
+        <div class="close">關閉</div>
+    </div>
+    <!-- 跳窗_小 -->
+    <div class="pop_s">
+        <div class="pop_s_wrap">
+        </div>
+        <div class="btn_box">
+            <div class="buy">確認</div>
+            <div class="close_w">取消</div>
+        </div>
+        <div class="close_s">確認</div>
+    </div>
+    <!-- 御神籤兌換 -->
+    <div class="pop_change">
+        <div class="pop_change_content">
+            <div class="user_paper_box">
+                <div class="user_paper_l"></div>
+                <div class="user_paper_m"></div>
+                <div class="user_paper_s"></div>
+                <div class="user_paper_e"></div>
+            </div>
+            <div class="all_cheak_box">
+                <div class="all_cheak" data-allExchange="false"></div>
+                <p>全部兌換</p>
+            </div>
+            <div class="item_box">
+                <div class="item">
+                    <p>大吉御神籤</p>
+                    <div class="paper_xl"></div>
+                    <div class="buy_btn" data-paper="XL">
+                        <div class="paper_l"></div>
+                        <p>20</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>吉御神籤</p>
+                    <div class="paper_l"></div>
+                    <div class="buy_btn" data-paper="L">
+                        <div class="paper_m"></div>
+                        <p>20</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>中吉御神籤</p>
+                    <div class="paper_m"></div>
+                    <div class="buy_btn" data-paper="M">
+                        <div class="paper_s"></div>
+                        <p>20</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>小吉御神籤</p>
+                    <div class="paper_s"></div>
+                    <div class="buy_btn" data-paper="S">
+                        <div class="paper_e"></div>
+                        <p>30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close">關閉</div>
+    </div>
+    <div class="wrap">
+        <!-- <div class="main"> -->
+        <div class="bg">
+            <div class="topbar">
+                <a href="https://go.digeam.com/home/" target="_blank">
+                    <div class="logo"></div>
+                </a>
+                <div class="user_info">
+                    <a href="https://www.digeam.com/register" target="_blank"><img src="img/icon_register.png"></a>
+                    <a href="https://go.digeam.com/download/​" target="_blank"><img src="img/icon_downlaod.png"></a>
+                    <a href="https://www.facebook.com/DigeamGO/" target="_blank"><img src="img/icon_fb.png"></a>
+                    <!-- 登入 -->
+                    <a href="https://www.digeam.com/login"><button class="login"></button></a>
+                    <!-- <button class="logout"></button> -->
+                    <p class="account">abc123</p>
+                    <p class="point"></p>
+
+                    <!-- <button class="logout" onclick="logout_dg()"></button>
+                <p class="account"><span>
+                    </span></p>
+                <p class="point"></p> -->
+
+                    <!-- <a href="https://www.digeam.com/login"><button class="login"></button></a>
+                <p class="account">請先登入帳號</p>
+                <p class="point">0</p> -->
+
+                </div>
+            </div>
+            <div class="paperbox"></div>
+            <div class="cheak_box" data-skipClicked="false"></div>
+            <div class="cheak_text"></div>
+            <div class="left_btn_box_c">
+                <div class="left_btn_change"></div>
+                <div class="left_btn_rule"></div>
+            </div>
+            <div class="left_btn_box_bl">
+                <div class="left_btn_history"></div>
+                <div class="left_btn_notice"></div>
+            </div>
+            <div class="right_btn_box">
+                <button class="ask3_btn"></button>
+                <button class="ask30_btn"></button>
+                <button class="ask5_btn"></button>
+                <button class="ask1_btn"></button>
+            </div>
+            <div class="count_box">
+                <p class="reward"></p>
+                <img src="img/count.png">
+            </div>
+            <div class="count_item_box">
+                <div class="reward_1" id="reward_1"></div>
+                <div class="reward_2" id="reward_2"></div>
+                <div class="reward_3" id="reward_3"></div>
+                <div class="reward_4" id="reward_4"></div>
+                <div class="reward_5" id="reward_5"></div>
+                <div class="reward_6" id="reward_6"></div>
+            </div>
+            <!-- 大吉繪馬 -->
+            <button class="ema_xl" onclick="shop('XL')">
+                <div class="ema_icon_box">
+                    <div class="icon_1 ema_icon"></div>
+                    <div class="icon_2 ema_icon"></div>
+                    <div class="icon_3 ema_icon"></div>
+                    <div class="icon_4 ema_icon"></div>
+                    <div class="icon_5 ema_icon"></div>
+                    <div class="icon_6 ema_icon"></div>
+                    <div class="icon_7 ema_icon"></div>
+                    <div class="icon_8 ema_icon"></div>
+                </div>
+                <p class="ema_paper user_paper_xl"></p>
+            </button>
+            <!-- 吉繪馬 -->
+            <button class="ema_l" onclick="shop('L')">
+                <div class="ema_icon_box">
+                    <div class="icon_9 ema_icon"></div>
+                    <div class="icon_10 ema_icon"></div>
+                    <div class="icon_11 ema_icon"></div>
+                    <div class="icon_12 ema_icon"></div>
+                    <div class="icon_13 ema_icon"></div>
+                    <div class="icon_14 ema_icon"></div>
+                    <div class="icon_8 ema_icon"></div>
+                    <div class="icon_2 ema_icon"></div>
+                    <div class="icon_3 ema_icon"></div>
+                    <div class="icon_4 ema_icon"></div>
+                    <div class="icon_5 ema_icon"></div>
+                    <div class="icon_6 ema_icon"></div>
+                    <div class="icon_7 ema_icon"></div>
+                    <div class="icon_22 ema_icon"></div>
+                    <div class="icon_23 ema_icon"></div>
+                    <div class="icon_24 ema_icon"></div>
+                    <div class="icon_25 ema_icon"></div>
+                </div>
+                <p class="ema_paper user_paper_l"></p>
+            </button>
+            <!-- 中吉繪馬 -->
+            <button class="ema_m" onclick="shop('M')">
+                <div class="ema_icon_box">
+                    <div class="icon_9 ema_icon"></div>
+                    <div class="icon_27 ema_icon"></div>
+                    <div class="icon_24 ema_icon"></div>
+                    <div class="icon_29 ema_icon"></div>
+                    <div class="icon_30 ema_icon"></div>
+                    <div class="icon_31 ema_icon"></div>
+                    <div class="icon_32 ema_icon"></div>
+                    <div class="icon_22 ema_icon"></div>
+                    <div class="icon_23 ema_icon"></div>
+                    <div class="icon_35 ema_icon"></div>
+                    <div class="icon_36 ema_icon"></div>
+                    <div class="icon_37 ema_icon"></div>
+                    <div class="icon_38 ema_icon"></div>
+                </div>
+                <p class="ema_paper user_paper_m"></p>
+            </button>
+            <!-- 小吉繪馬 -->
+            <button class="ema_s" onclick="shop('S')">
+                <div class="ema_icon_box">
+                    <div class="icon_9 ema_icon"></div>
+                    <div class="icon_40 ema_icon"></div>
+                    <div class="icon_29 ema_icon"></div>
+                    <div class="icon_42 ema_icon"></div>
+                    <div class="icon_43 ema_icon"></div>
+                    <div class="icon_44 ema_icon"></div>
+                    <div class="icon_30 ema_icon"></div>
+                    <div class="icon_31 ema_icon"></div>
+                    <div class="icon_27 ema_icon"></div>
+                    <div class="icon_35 ema_icon"></div>
+                    <div class="icon_49 ema_icon"></div>
+                    <div class="icon_50 ema_icon"></div>
+                    <div class="icon_36 ema_icon"></div>
+                    <div class="icon_52 ema_icon"></div>
+                    <div class="icon_53 ema_icon"></div>
+                    <div class="icon_54 ema_icon"></div>
+                    <div class="icon_55 ema_icon"></div>
+                    <div class="icon_56 ema_icon"></div>
+                </div>
+                <p class="ema_paper user_paper_s"></p>
+            </button>
+            <!-- 末吉繪馬 -->
+            <button class="ema_e" onclick="shop('E')">
+                <div class="ema_icon_box">
+                    <div class="icon_9 ema_icon"></div>
+                    <div class="icon_40 ema_icon"></div>
+                    <div class="icon_29 ema_icon"></div>
+                    <div class="icon_54 ema_icon"></div>
+                    <div class="icon_60 ema_icon"></div>
+                    <div class="icon_44 ema_icon"></div>
+                    <div class="icon_52 ema_icon"></div>
+                    <div class="icon_42 ema_icon"></div>
+                    <div class="icon_30 ema_icon"></div>
+                    <div class="icon_27 ema_icon"></div>
+                    <div class="icon_35 ema_icon"></div>
+                    <div class="icon_53 ema_icon"></div>
+                    <div class="icon_54 ema_icon"></div>
+                    <div class="icon_70 ema_icon"></div>
+                    <div class="icon_71 ema_icon"></div>
+                    <div class="icon_56 ema_icon"></div>
+                </div>
+                <p class="ema_paper user_paper_e"></p>
+            </button>
+        </div>
+        <!-- </div> -->
+
+
+        <!-- footer -->
+        <footer>
+            <div class="footerwrap">
+                <a href="https://www.digeam.com/" target="_blank" class="digeam"><img
+                        src="img/footer/digeamlogo.png"></a>
+                <div class="mgame"><img src="img/footer/mlogo.webp"></div>
+                <div class="DGcopy">
+                    <p class="dg-name">掘夢網股份有限公司 © <span id="getyear">2023</span></p>
+                    <div>Copyright © DiGeam Corporation. All Rights Reserved.</div>
+                    <div>客服信箱: <a href="https://www.digeam.com/cs" target="_blank">www.digeam.com/cs</a></br>官方網站: <a
+                            href="https://www.digeam.com" target="_blank">www.digeam.com</a></div>
+                </div>
+                <div class="grade">
+                    <img src="img/footer/15plus.png">
+                    <p>
+                        本遊戲為免費使用，部分內容涉及暴力情節。</br>
+                        遊戲內另提供購買虛擬遊戲幣、物品等付費服務。</br>
+                        請注意遊戲時間，避免沉迷。</br>
+                        <span style="color: #ff8a8a;">本遊戲服務區域包含台灣、香港、澳門。</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/view.js?v2"></script>
+    <script src="js/main.js?v4.6"></script>
+</body>
+
+</html>
