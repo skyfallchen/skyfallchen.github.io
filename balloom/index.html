@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=yes">
+    <meta name="title" content="digeam">
+    <meta name="description" content="掘夢網是由一群遊戲的同好所創辦，他們憑著一股創業熱情，打造出夢想中的企業。">
+    <meta name="keywords" content="digeam, 掘夢網">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="掘夢網">
+    <meta property="og:description" content="掘夢網是由一群遊戲的同好所創辦，他們憑著一股創業熱情，打造出夢想中的企業。">
+    <meta property="og:image" content="/event/20240614/img/1200x628_fb.jpg">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>DiGeam | ✨掘夢週年平台活動✨</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="mask"></div>
+    <div class="maskS"></div>
+    <div class="maskLock"></div>
+
+    <!-- 小跳窗 -->
+    <div class="popS">
+        <div class="popScontent">
+        </div>
+        <div class="popBtnBox">
+            <button class="btnYes" onclick="">確認</button>
+            <button class="btnHome"><a href=""></a></button>
+            <button class="btnNo" onclick="popSClose()">取消</button>
+        </div>
+    </div>
+    <!-- 活動說明 -->
+    <div class="pop" id="event">
+        <button class="popClose" onclick="popClose()"></button>
+        <div class="eventPopWrap">
+            <div class="popTitle"></div>
+            <div class="tabBox">
+                <div class="tabBtn tabL balloomRule" data-target="#balloomRule">氣球爆爆王</div>
+                <div class="tabBtn tabR dartsRule" data-target="#dartsRule">百發百中神射手</div>
+            </div>
+            <div class="popContent">
+                <div class="tabTextBox" id="balloomRule">
+                    <ol>
+                        <li>1.活動時間：2024/06/14(五) 中午12:00 ~ 2024/06/26(三) 中午12:00</li>
+                        <li>2.活動期間，累積儲值每達1,000元，可獲得一次充氣機會，每「充氣」一次，將隨機獲得1~10點不等的「爆爆積分」。</li>
+                        <li>3.每次登入或重新整理本活動頁面，將自動消耗未使用的充氣次數進行充氣。</li>
+                        <li>4.使用<span><a href="https://www.digeam.com/member/vip"
+                                    target="_blank">VIP直儲</a></span>管道儲值的額度進行「充氣」時，可獲得<span>三倍</span>的「爆爆積分」。</li>
+                        <li>5.於期限內成功將氣球爆破的玩家，可獨得該氣球的「爆破獎金」，並於頁面內推播公告。</li>
+                        <li>6.未於期限內完成氣球爆破，將會自動切換下一顆氣球做爆破挑戰。</li>
+                        <li>7.本活動共有3個氣球，越後面的爆破獎金越高，需充氣的標準也越高，活動結束前成功爆破3個氣球時，將開啟加碼氣球挑戰額外的爆破獎金。</li>
+                    </ol>
+                    <div class="tableBox">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>一般充氣回饋</th>
+                                    <th>VIP儲值充氣回饋</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>獲取方法</td>
+                                    <td colspan="2">累積儲值每1000元 </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="10">獎勵內容<br>(隨機一個)</td>
+                                    <td>爆爆積分1點</td>
+                                    <td>爆爆積分3點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分2點</td>
+                                    <td>爆爆積分6點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分3點</td>
+                                    <td>爆爆積分9點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分4點</td>
+                                    <td>爆爆積分12點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分5點</td>
+                                    <td>爆爆積分15點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分6點</td>
+                                    <td>爆爆積分18點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分7點</td>
+                                    <td>爆爆積分21點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分8點</td>
+                                    <td>爆爆積分24點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分9點</td>
+                                    <td>爆爆積分27點</td>
+                                </tr>
+                                <tr>
+                                    <td>爆爆積分10點</td>
+                                    <td>爆爆積分30點</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tabTextBox" id="dartsRule">
+                    <ol>
+                        <li>1.活動時間：2024/06/14(五) 中午12:00 ~ 2024/06/26(三) 中午12:00</li>
+                        <li>2.活動期間，每日儲值達1元、3,000元、10,000元，即可獲得對應金額的飛鏢(黃、藍、紅色)。點擊飛鏢射擊氣球，可獲得隨機數量的週年紅利點數。</li>
+                        <li>3.黃飛鏢、藍飛鏢每日限獲取1枚，紅飛鏢則不限獲取次數，各項儲值金額以單日累計方式計算，跨日不累計。</br>
+                            例：6/17(一)小夢儲值了6,000元，即可獲得黃飛鏢1枚、藍飛鏢1枚。</br>
+                            例：6/18(二)小夢儲值了25,000元，即可獲得黃飛鏢1枚、藍飛鏢1枚、紅飛鏢2枚。
+                        </li>
+                        <li>4.每日獲取的飛鏢將於隔日00:00時重置數量。</li>
+                    </ol>
+                    <div class="tableBox">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>黃飛鏢</th>
+                                    <th>藍飛鏢</th>
+                                    <th>紅飛鏢</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>獲取方法</td>
+                                    <td>儲值1元</td>
+                                    <td>儲值3000元</td>
+                                    <td>儲值10000元</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">獎勵內容<br>(隨機一個)</td>
+                                    <td>紅利1點</td>
+                                    <td>紅利50點</td>
+                                    <td>紅利200點</td>
+                                </tr>
+                                <tr>
+                                    <td>紅利30點</td>
+                                    <td>紅利150點</td>
+                                    <td>紅利500點</td>
+                                </tr>
+                                <tr>
+                                    <td>紅利100點</td>
+                                    <td>紅利300點</td>
+                                    <td>紅利1000點</td>
+                                </tr>
+                                <tr>
+                                    <td>紅利300點</td>
+                                    <td>紅利3000點</td>
+                                    <td>紅利10000點</td>
+                                </tr>
+                                <tr>
+                                    <td>備註</td>
+                                    <td>每日一次</td>
+                                    <td>每日一次</td>
+                                    <td>單日循環</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 注意事項 -->
+    <div class="pop" id="notice">
+        <button class="popClose" onclick="popClose()"></button>
+        <div class="noticePopWrap">
+            <div class="popTitle"></div>
+            <div class="tabBox">
+                <div class="tabBtn tabL balloomNotice" data-target="#balloomNotice">氣球爆爆王</div>
+                <div class="tabBtn tabM dartsNotice" data-target="#dartsNotice">百發百中神射手</div>
+                <div class="tabBtn tabR shopNotice" data-target="#shopNotice">積分商店</div>
+            </div>
+            <div class="popContent">
+                <div class="tabTextBox" id="balloomNotice">
+                    <ol>
+                        <li>1.「氣球爆爆王」獲取的充氣次數需於活動結束前使用完畢，未於時間內消耗視同放棄權益。</li>
+                        <li>2.本活動採累積儲值金額為判斷依據，每一會員帳號不限參加活動次數。</li>
+                        <li>3.本活動的商品為機率性，消費者購買或參與活動不代表即可獲得特定獎勵，中獎之獎項依官方活動系統「活動記錄」後台記錄為準。</li>
+                        <li>4.透過「氣球爆爆王」取得的「爆爆積分」，請於2024/06/28(五)中午12:00前透過「積分商店」頁面完成獎勵兌換，未於期限內完成兌換將由系統全數回收。</li>
+                        <li>5.本活動獲得之「週年紅利點數」功能同「紅利點數」，需要至掘夢網平台的<a
+                                href="https://www.digeam.com/member/changepoint_20240614">「週年紅利專區」</a>轉點至各遊戲後方能使用。</li>
+                        <li>6.本活動獲得之「週年紅利點數」需於<span>2024/6/30(日) 23:59</span>前消耗完畢，逾期則全數刪除。</li>
+                        <li>7.本活動所獲得之紅利點數轉點不列入本公司任何遊戲之儲值活動計算。</li>
+                        <li>8.本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌例：人為操作、惡意灌票、蓄意偽造、多開（重）帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約，或以任何其他不正當的方式意圖以進行不實或虛偽活動參與行為，參賽者因上述情形所獲得之活動資格及獎項，本公司得一概取消之，其帳號亦將停權處份。
+                        </li>
+                        <li>9.玩家參與本活動之同時，即同意接受本活動辦法與注意事項之規範，如不同意或有違反，應視為無參加資格，或本公司得取消其使用資格，如因此有致生損害於本公司或其他任何第三人，本公司得向參加者請求損害賠償，參加者應負一切相關責任。​
+                        </li>
+                    </ol>
+                    <ol>
+                        <li>10.信用卡、WEBATM、優惠直儲管道…等平台原有的紅利回饋點數，活動進行期間不影響獲得，歡迎多加利用。</li>
+                        <li>11.掘夢網股份有限公司保留變更、取消或終止本活動的權利，包括但不限於本活動條款及活動辦法。</li>
+                        <li>12.本活動之儲值點數與相關紅利回饋，僅適用於本公司端遊系列產品，不適用手遊系列產品。</li>
+                    </ol>
+                </div>
+                <div class="tabTextBox" id="dartsNotice">
+                    <ol>
+                        <li>1.「百發百中神射手」每日獲取的飛鏢需於當日23:59前使用完畢，未於時間內消耗視同放棄權益。</li>
+                        <li>2.本活動的商品為機率性，消費者購買或參與活動不代表即可獲得特定獎勵。​</li>
+                        <li>3.本活動獲得之「週年紅利點數」功能同「紅利點數」，需要至掘夢網平台的<a
+                                href="https://www.digeam.com/member/changepoint_20240614">「週年紅利專區」</a>轉點至各遊戲後方能使用。</li>
+                        <li>4.本活動獲得之「週年紅利點數」需於<span>2024/6/30(日) 23:59</span>前消耗完畢，逾期則全數刪除。</li>
+                        <li>5.本活動所獲得之紅利點數轉點不列入本公司任何遊戲之儲值活動計算。</li>
+                        <li>6.本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌例：人為操作、惡意灌票、蓄意偽造、多開（重）帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約，或以任何其他不正當的方式意圖以進行不實或虛偽活動參與行為，參賽者因上述情形所獲得之活動資格及獎項，本公司得一概取消之，其帳號亦將停權處份。
+                        </li>
+                        <li>7.掘夢網股份有限公司保留變更、取消或終止本活動的權利，包括但不限於本活動條款及活動辦法。​</li>
+                        <li>8.本活動之儲值點數與相關紅利回饋，僅適用於本公司端遊系列產品，不適用手遊系列產品。</li>
+                    </ol>
+                </div>
+                <div class="tabTextBox" id="shopNotice">
+                    <ol>
+                        <li>1.「積分商店」中的實體獎勵數量有限，全數兌換完畢時，將於頁面中顯示，並停止兌換該項獎勵。</li>
+                        <li>2.「積分商店」中的部分獎勵以帳號為準，每日兌換次數有限，達上限時，當日將無法再兌換該獎勵。</li>
+                        <li>3.本活動獲得之「週年紅利點數」功能同「紅利點數」，需要至掘夢網平台的<a
+                                href="https://www.digeam.com/member/changepoint_20240614">「週年紅利專區」</a>轉點至各遊戲後方能使用。</li>
+                        <li>4.本活動獲得之「週年紅利點數」需於<span>2024/6/30(日) 23:59</span>前消耗完畢，逾期則全數刪除。</li>
+                        <li>5.本活動所獲得之紅利點數轉點不列入本公司任何遊戲之儲值活動計算。</li>
+                        <li>6.實體獎品兌換者須於活動結束後7日內，主動聯繫<a href="https://www.digeam.com/cs/report"
+                                target="_blank">「客服中心」</a>回報「姓名、電話、獎勵寄送地址」，經官方確認資料無誤後獎品將於5個工作日內寄出。</li>
+                        <li>7.當實體獎品價值超過1,000元以上時，依政府規定須列入所得申報，兌換者需下載並完整填寫<a
+                                href="https://download.digeam.com/download/digeam/DiGeam_OWC.zip"
+                                target="_blank">「機會中獎憑證」</a>後寄至客服信箱(cs@digeam.om)，經官方確認資料無誤後，獎品將依照文件內填寫的寄送地址於5個工作日內寄出。
+                        </li>
+                        <li>8.透過「積分商店」兌換之實體獎品寄送地址僅限台港澳地區，如地址不符合上述條件，恕無法寄出。</li>
+                        <li>9.本活動兌換獲得之紅利點數，僅適用於本公司端遊系列產品，不適用手遊系列產品。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 積分商店 -->
+    <div class="pop" id="shop">
+        <button class="popClose" onclick="popClose()"></button>
+        <div class="shopPopWrap">
+            <div class="popTitle"></div>
+            <div class="shopPointBox">
+                <div class="pointText">現有積分</div>
+                <div class="shopPoint">點</div>
+            </div>
+            <div class="popContent">
+            </div>
+        </div>
+    </div>
+    <!-- 活動紀錄 -->
+    <div class="pop" id="recode">
+        <button class="popClose" onclick="popClose()"></button>
+        <div class="recodePopWrap">
+            <div class="popTitle"></div>
+            <div class="tabBox">
+                <div class="tabBtn tabL balloomRecode" data-target="#balloomRecode">氣球爆爆王</div>
+                <div class="tabBtn tabR dartsRecode" data-target="#dartsRecode">百發百中神射手</div>
+            </div>
+            <div class="popContent">
+                <div class="tabTextBox" id="balloomRecode">
+                    <div class="tableBox">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th width="20%">時間</th>
+                                    <th width="20%">活動</th>
+                                    <th width="40%">項目</th>
+                                    <th width="30%">詳細內容</th>
+                                </tr>
+                            </thead>
+                            <tbody class="balloomRecode">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tabTextBox" id="dartsRecode">
+                    <div class="tableBox">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th width="20%">時間</th>
+                                    <th width="25%">活動</th>
+                                    <th width="25%">項目</th>
+                                    <th width="30%">詳細內容</th>
+                                </tr>
+                            </thead>
+                            <tbody class="dartsRecode">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 動畫 -->
+    <div class="animationBalloom"></div>
+    <div class="animationDarts"></div>
+    <!-- 讀取中 -->
+    <div class="loading">
+        <div id="fountainTextG">
+            <div id="fountainTextG_1" class="fountainTextG">L</div>
+            <div id="fountainTextG_2" class="fountainTextG">o</div>
+            <div id="fountainTextG_3" class="fountainTextG">a</div>
+            <div id="fountainTextG_4" class="fountainTextG">d</div>
+            <div id="fountainTextG_5" class="fountainTextG">i</div>
+            <div id="fountainTextG_6" class="fountainTextG">n</div>
+            <div id="fountainTextG_7" class="fountainTextG">g</div>
+        </div>
+    </div>
+
+    <div class="topbar">
+        <a href="https://www.digeam.com/member/billing">
+            <div class="topUpBtn">前往儲值</div>
+        </a>
+        <div class="pointBox">
+            <div>
+                <!-- @if (Auth::guest()) -->
+                <p class="account">目前帳號<span>abc123</span></p>
+                <!-- @else
+                <p class="account">目前帳號<span>{{ Auth::user()->user_id }}</span></p>
+                @endif -->
+            </div>
+            <div>
+                <p class="todayValue">今日儲值<span></span></p>
+            </div>
+            <div>
+                <p class="accValue">活動累積儲值<span></span></p>
+            </div>
+            <div>
+                <p class="points">爆爆積分<span></span></p>
+            </div>
+        </div>
+        <!--  登入 -->
+        <!-- @if (Auth::guest())
+        <a href="https://www.digeam.com/login">
+            <button class="loginBtn"></button>
+        </a>
+        @else
+        {{-- 登出 --}}
+        <a>
+            <button class="loginBtn" onclick="logout_dg()"></button>
+        </a>
+        @endif -->
+
+    </div>
+    <div class="leftbar">
+        <div class="menu">
+            <a href="https://www.digeam.com/index" target="_blank">
+                <div class="logo"></div>
+            </a>
+            <a href="#section1">
+                <div class="leftbarBtn sideBarSectionA active" data-target="none" data-section="section1">氣球​</br>爆爆王
+                </div>
+            </a>
+            <a href="#section2">
+                <div class="leftbarBtn sideBarSectionB" data-target="none" data-section="section2">百發百中​</br>神射手
+                </div>
+            </a>
+            <div class="leftbarBtn" data-target="#event">活動說明</div>
+            <div class="leftbarBtn" data-target="#notice">注意事項</div>
+            <div class="leftbarBtn" data-target="#shop">積分商店</div>
+            <div class="leftbarBtn" data-target="#recode">活動紀錄</div>
+        </div>
+        <div class="menuBtn">
+        </div>
+    </div>
+    <!-- 氣球爆爆王 -->
+    <div class="section" id="section1">
+        <div class="arrow animate__animated animate__bounce animate__infinite animate__slow 2s"></div>
+        <div class="title"></div>
+        <div class="balloomBox">
+            <div class="balloomBoxS">
+                <div class="scale">
+                    <div class="balloom"></div>
+                </div>
+                <div class="BalloomRope"></div>
+            </div>
+            <div class="otherBalloom"></div>
+        </div>
+        <div class="timer">
+            <a href="https://www.digeam.com/member/vip" target="_blank">
+                <div class="vip"></div>
+            </a>
+            <div class="timeBox">
+                <p>剩餘</br>時間</p>
+                <p><i></i>:<i></i>:<i></i></p>
+            </div>
+            <p>你已充氣<span class="inflation"></span>次</p>
+        </div>
+        <div class="winnerBox">
+            <div class="winnerText">
+            </div>
+        </div>
+        <div class="bubblesText">
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <!-- 神射手 -->
+    <div class="section" id="section2">
+        <div class="section2Mask">
+            <p data-text="已結束">已結束</p>
+        </div>
+
+        <div class="dartsBox">
+            <div class="dartsBtnBox">
+                <button class="dartsYbtn animate__animated animate__pulse animate__infinite"
+                    onclick="FirstDarts('y_darts','N')"></button>
+                <p>持有：<span class="dartsYquantity"></span></p>
+            </div>
+            <div class="dartsBtnBox">
+                <button class="dartsBbtn animate__animated animate__pulse animate__infinite"
+                    onclick="FirstDarts('b_darts','N')"></button>
+                <p>持有：<span class="dartsBquantity"></span></p>
+            </div>
+            <div class="dartsBtnBox">
+                <button class="dartsRbtn animate__animated animate__pulse animate__infinite"
+                    onclick="FirstDarts('r_darts','N')"></button>
+                <p>持有：<span class="dartsRquantity"></span></p>
+            </div>
+        </div>
+        <div class="cheakBox">
+            <div class="cheak cheakF" data-skipClicked="false"></div>
+            <p>今日略過動畫&一鍵射擊</p>
+        </div>
+    </div>
+    <!--------------------- 版權聲明開關 --------------------->
+    <div class="footerBtn">
+        <p>版權訊息</p>
+        <div class="footerBtnbox">
+            <div class="footerBtnball">©</div>
+        </div>
+    </div>
+    <!--------------------- footer --------------------->
+    <footer>
+        <div class="footerWarp">
+            <a href="https://www.digeam.com/index" target="_blank">
+                <div class="digeamLogo"></div>
+            </a>
+            <ol>
+                <li><a href="https://www.104.com.tw/company/1a2x6bkal7" target="_blank">工作機會</a></li>
+                <li><a href="https://www.digeam.com/terms" target="_blank">服務條款</a></li>
+                <li><a href="https://www.digeam.com/terms2" target="_blank">隱私條款</a></li>
+            </ol>
+            <p>掘夢網股份有限公司 © 2024</br>
+                Copyright © DiGeam Corporation. All Rights Reserved.</br>
+                客服信箱: cs@digeam.com | 官方網站: www.digeam.com
+            </p>
+        </div>
+    </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/info.js"></script>
+    <script src="https://kit.fontawesome.com/190224718e.js" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

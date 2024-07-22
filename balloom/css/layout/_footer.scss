@@ -1,0 +1,98 @@
+.footerBtn {
+    position: fixed;
+    z-index: 5;
+    bottom: 43px;
+    right: 14px;
+    color: rgba(121, 91, 0, 0.7);
+    font-weight: 600;
+    cursor: default;
+    p{
+        font-family: 'Noto Sans TC', sans-serif;
+        color: #fff2ae;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .footerBtnbox {
+        position: fixed;
+        z-index: 4;
+        bottom: 12px;
+        right: 20px;
+        width: 50px;
+        height: 24px;
+        border-radius: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 3px 0px rgba(0, 0, 0, .13) inset;
+        cursor: pointer;
+
+        .footerBtnball {
+            width: 18px;
+            height: 18px;
+            margin: 3px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 18px;
+            color: rgb(36, 89, 185);
+        }
+    }
+}
+footer {
+    z-index: 4;
+    position: fixed;
+    bottom: -500px;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding: 10px;
+    border-top: #fff2ae solid 3px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, .3);
+
+    .footerWarp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 10px 400px 6px 500px;
+
+        p {
+            color: #ffff;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 20px;
+        }
+        ol{
+            display: grid;
+            grid-template-columns: repeat(3,100px);
+            margin-left: 77px;
+            li:nth-child(1){
+                a{
+                    border: none;
+                }
+            }
+            li{
+                display: inline;
+                color: #fff2ae;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                a{
+                    border-left: rgb(36, 89, 185) solid 1px;
+                    color: #ffff;
+                    padding-left: 18px;
+                    &:hover{
+                        color: #3082fd;
+                    }
+                }
+            }
+        }
+    }
+}
+// footer .footerWarp ol li a:nth-child(1) {
+//     border-left: none;
+// }
+
+
