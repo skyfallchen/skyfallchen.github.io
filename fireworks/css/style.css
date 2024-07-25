@@ -870,26 +870,26 @@ button {
 
 #fireworks {
   left: -6%;
-  bottom: 63%;
+/*   bottom: 63%; */
   animation: fireworks 5s 4s infinite;
   overflow: hidden;
 }
 
 #fireworksY {
   left: 59%;
-  bottom: 61%;
+/*   bottom: 61%; */
   animation: fireworks 5s 1s infinite;
 }
 
 #fireworksB {
   left: 62%;
-  bottom: 66%;
+/*   bottom: 66%; */
   animation: fireworks 5s 2s infinite;
 }
 
 #fireworksW {
   left: 40%;
-  bottom: 73%;
+/*   bottom: 73%; */
   animation: fireworks 5s 3s infinite;
 }
 
