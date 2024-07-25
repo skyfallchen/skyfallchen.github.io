@@ -964,7 +964,7 @@ button {
 #fireworks {
     @extend %fireworkAnime;
     left: -6%;
-    bottom: 63%;
+    // bottom: 63%;
     animation: fireworks 5s 4s infinite;
     overflow: hidden;
 }
@@ -972,21 +972,21 @@ button {
 #fireworksY {
     @extend %fireworkAnime;
     left: 59%;
-    bottom: 61%;
+    // bottom: 61%;
     animation: fireworks 5s 1s infinite;
 }
 
 #fireworksB {
     @extend %fireworkAnime;
     left: 62%;
-    bottom: 66%;
+    // bottom: 66%;
     animation: fireworks 5s 2s infinite;
 }
 
 #fireworksW {
     @extend %fireworkAnime;
     left: 40%;
-    bottom: 73%;
+    // bottom: 73%;
     animation: fireworks 5s 3s infinite;
 }
 
