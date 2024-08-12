@@ -9,7 +9,7 @@ var loginres = {
       "y_darts": 1,
       "b_darts": 20,
       "r_darts": 300,
-      "refresh_date": "2024:06:04 16:03:54"
+      "refresh_date": "2024:08:31 16:03:54"
     },
     today_store_value: 5000000,
     acc_store_value: 53330000,
